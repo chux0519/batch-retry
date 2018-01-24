@@ -1,0 +1,22 @@
+{
+  "name": "batch-retry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage && codecov"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "jest": "^22.1.4"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "roots": [
+      "./test"
+    ]
+  }
+}

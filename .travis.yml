@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 'node'
+  - '8'
+
+install:
+  - npm install
+script:
+  - npm run test
+
+notifications: # set notification options
+  email:
+    recipients:
+      - chux0519@gmail.com
+branches:
+  only:
+    - master
