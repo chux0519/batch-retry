@@ -1,13 +1,17 @@
 {
   "name": "batch-retry",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage && codecov"
   },
-  "author": "",
+  "author": "chux0519",
   "license": "ISC",
+  "repository": {
+    "type" : "git", 
+    "url" : "https://github.com/chux0519/batch-retry.git"
+  },
   "devDependencies": {
     "codecov": "^3.0.0",
     "jest": "^22.1.4"

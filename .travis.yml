@@ -11,7 +11,7 @@ script:
 notifications: # set notification options
   email:
     recipients:
-      - chux0519@gmail.com
+      - chux0519@hotmail.com
 branches:
   only:
     - master
