@@ -1,1 +1,5 @@
-module.exports = require('./lib/batch-retry')
+const BatchRetry = require('./lib/batch-retry')
+
+module.exports = {
+  BatchRetry
+}
