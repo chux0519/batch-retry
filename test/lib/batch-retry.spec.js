@@ -1,4 +1,4 @@
-const {BatchRetry} = require('../../index')
+const BatchRetry = require('../../lib/batch-retry')
 
 describe('Class BatchRetry', () => {
   describe('Given an executor which will throw error', () => {
