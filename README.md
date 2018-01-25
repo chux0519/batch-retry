@@ -81,7 +81,7 @@ const simpleExecutor = numbers => Promise.all(numbers
   // wrap the executor
   const simpleExecutorWithBatchRetry = withBatchRerty(simpleExecutor)
   // Run the process
-  simpleExecutorWithBatchRetry(input).then(console.log)
+  simpleExecutorWithBatchRetry([1, 2, 3]).then(console.log)
   // will output all the result [[1],[evenError, evenError, evenError, evenError, evenError],[3]]
   // if onlyFinalResult set to true, it will only output [1, evenError, 3]
 }
@@ -94,7 +94,7 @@ const simpleExecutor = numbers => Promise.all(numbers
         executor: simpleExecutor
       })
   // Run the process
-  simpleExecutorWithBatchRetry(input).then(console.log)
+  simpleExecutorWithBatchRetry([1, 2, 3]).then(console.log)
 }
 ```
 
