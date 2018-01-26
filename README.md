@@ -106,7 +106,7 @@ constructor(options) => batchRetry: BatchRetry
 
 - `options.shouldRetry`: Function for checking retry. *Default: Check if the value is of type `error` or `error-like`(has properties `stack` and `message`) or executed times is greater than or euqal to maxRetries.*
   - Function: (task, result, executedTimes) = > Boolean
-- `options.maxRetries`: Max retry times. *Default: `5`*
+- `options.maxRetries`: Max retry times. *Default: `3`*
   - Number
 - `options.onlyFinalResult`: Representing if it should only returns the final result. If setting to false, it will returns all results instead. For example, having final result: `[1, error, 3]` and all results: `[[1], [error, error, error, error, error], [3]]`, it means only the second task failed, and after five retries, it still failed. *Default: `true`*
   - Boolean

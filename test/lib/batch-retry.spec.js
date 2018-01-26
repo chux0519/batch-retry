@@ -28,7 +28,7 @@ describe('Class BatchRetry', () => {
   describe('Given an executor which will only return input when input is odd and returns all retries results', () => {
     const evenError = new Error('Even')
     const executor = numbers => numbers.map(each => (each % 2 === 0) ? evenError : each)
-    const batchRetry = new BatchRetry({executor, onlyFinalResult: false})
+    const batchRetry = new BatchRetry({executor, onlyFinalResult: false, maxRetries: 5})
     it('Should throw when run an empty tasks', async () => {
       await batchRetry.run([]).catch(e => expect(e.message).toMatch(/No tasks to run!/))
     })
@@ -64,7 +64,7 @@ describe('Class BatchRetry', () => {
           : Promise.resolve(each)
       )
     )
-    const batchRetry = new BatchRetry({executor, onlyFinalResult: false})
+    const batchRetry = new BatchRetry({executor, onlyFinalResult: false, maxRetries: 5})
     it('Should throw when run an empty tasks', async () => {
       await batchRetry.run([]).catch(e => expect(e.message).toMatch(/No tasks to run!/))
     })
